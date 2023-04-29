@@ -28,11 +28,13 @@
 {
     font-weight: bolder;
     cursor: pointer;
+    margin-top: 1.5rem;
 }
 
 nav
 {
-
+    flex-grow: 1;
+    text-align: right;
 }
 
 nav ul li
@@ -52,4 +54,41 @@ nav ul li a
 .navbar .menu_mobile
 {
     display: none;
+    /* flex-shrink: ; */
+}
+
+@media only screen and (max-width:768px)
+{
+      
+    .navbar .menu_mobile
+    {
+        display: block;
+    }
+    nav ul 
+    {
+        width: 100%;
+        background-color: blueviolet;
+        position: absolute;
+        top: 3.5rem;
+        right: 0;
+        z-index: 2;
+        text-align: left;
+
+    }
+    nav ul li 
+    {
+        display: block;
+        margin: 0.75rem 0;
+        padding: 0.5rem;
+
+    }
+    nav ul li a
+    {
+        color: #fff;
+    }
+
+    #menu
+    {
+        transition: all 0.5s;
+    }
 }
